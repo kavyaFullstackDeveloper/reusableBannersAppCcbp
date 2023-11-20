@@ -1,18 +1,17 @@
 import './index.css'
 
 const BannerCardItem = props => {
-  const {BannerCardDetails} = props
-  const {headerText, description, imgUrl, className} = BannerCardDetails
+  const {bannerDetails} = props
+  const {headerText, description, className} = bannerDetails
 
   return (
     <li className={`${className} banner-card-item`}>
-      <h1 className="banner-card-title">{headerText}</h1>
-      <p className="banner-card-description">{description}</p>
-      <div className="img-container">
-        <img className="card-img" src={imgUrl} alt={title} />
-      </div>
       <div>
-        <button>Show More</button>
+        <h1 className="heading">{headerText}</h1>
+        <p className="description">{description}</p>
+        <button className="show-more-btn" type="button">
+          Show More
+        </button>
       </div>
     </li>
   )
